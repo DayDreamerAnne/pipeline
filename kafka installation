@@ -1,0 +1,18 @@
+Mac user
+1. brew install kafka
+      /usr/local/etc/kafka
+      /usr/local/etc/zookeeper
+2.start zookeeper:
+      zkServer start
+      the port zookeeper.connect=localhost:2181 (in server.properties) should be identical to the port in zookeeper.properties
+3.start kafka:
+      cd /usr/local/Cellar/kafka/1.1.0/bin
+      ./kafka-server-start /usr/local/etc/kafka/server.properties 
+4. start a producer:
+./kafka-console-producer --topic [topic-name] --broker-list localhost:9092
+5. start a consumter:
+./kafka-console-consumer --bootstrap-server localhost:9092 -topic [topic-name]
+      
+
+      
+    
